@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	Cuenta miCuenta(10);
+	Cuenta miCuenta(-10);
 
 	cout << "El sado es de: " << miCuenta.obtenerSaldo() << endl;
 	miCuenta.abonar(19);
@@ -14,4 +14,7 @@ int main() {
 
 	system("pause");
 	return 0;
+
+	for (i = 0; i < numeroEmpleados; i++) {}
 }
+
