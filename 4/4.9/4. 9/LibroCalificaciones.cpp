@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "LiboCalificaciones.h"
+#include "LibroCalificaciones.h"
 using namespace std;
 
 
@@ -28,9 +28,9 @@ void LibroCalificacioines::mostrarMensaje() const {
 
 void LibroCalificacioines::determinarPromedioClase() const {
 	int total = 0;
-	unsigned int contadorCalif;
+	unsigned int contadorCalif = 0;
 
-	cout << "Escriba la calificacion o -1 para salir: "; 
+	cout << "Escriba la calificacion o -1 para salir: ";
 	int calificacion;
 	cin >> calificacion;
 
@@ -43,16 +43,13 @@ void LibroCalificacioines::determinarPromedioClase() const {
 	}
 
 	if (contadorCalif != 0) {
-		double promedio = static_cast<double>(total) / contadorCalif;
+		float promedio = static_cast<float>(total) / contadorCalif;
 
 		cout << "\nEl total de las " << contadorCalif << " calificaciones introducidas es de: " << total << endl;
-		cout << setprecision(2) << fixed;
+		cout << setprecision(2) << fixed << showpoint;
 		cout << "El promedio de la clase es: " << promedio << endl;
 	}
 	else {
 		cout << "No se introdujeron calificaciones " << endl;
 	}
 }
-
-
-

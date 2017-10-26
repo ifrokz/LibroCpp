@@ -1,4 +1,4 @@
-#include "LiboCalificaciones.h"
+#include "LibroCalificaciones.h"
 
 int main()
 {
