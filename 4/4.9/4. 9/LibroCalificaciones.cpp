@@ -46,7 +46,8 @@ void LibroCalificacioines::determinarPromedioClase() const {
 		float promedio = static_cast<float>(total) / contadorCalif;
 
 		cout << "\nEl total de las " << contadorCalif << " calificaciones introducidas es de: " << total << endl;
-		cout << setprecision(2) << fixed << showpoint;
+		// showpoint muestra el punto en notacion cientifica, fixed obliga a mostrar un numero con la cantidad de decimales de setprecision
+		cout << setprecision(2)  << fixed << showpoint; 
 		cout << "El promedio de la clase es: " << promedio << endl;
 	}
 	else {
