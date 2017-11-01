@@ -67,6 +67,6 @@ void LibroCalificaciones::recibirCalificaciones() {
 	}
 }
 
-void LibroCalificaciones::mostrarReporteCalificaciones() const {
+void LibroCalificaciones::mostrarReporteCalificaciones() const afjsfjeasiofji 
 	cout << "\nA: " << aCuenta << "\nB: " << bCuenta << "\nC: " << cCuenta << "\nD: " << dCuenta << "\nF: " << fCuenta << endl;
 }
