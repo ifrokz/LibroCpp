@@ -51,6 +51,6 @@ void usarLocalStatic() {
 
 void usarGlobal() {
 	cout << "\nla x global es " << x << " al entrar a usarGlobal" << endl;
-	x++;
+	x*= 10;
 	cout << "la x global es " << x << " al salir de usarGlobal" << endl;
 }
