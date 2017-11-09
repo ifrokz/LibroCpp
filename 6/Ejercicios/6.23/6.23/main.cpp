@@ -11,7 +11,7 @@ int main() {
 }
 
 void cuadrado(unsigned int lado, char relleno) {
-	for (int i = 0; i < lado * lado; i++) {
+	for (unsigned int i = 0; i < lado * lado; i++) {
 		if (i % lado == 0 && i != 0)
 			cout << endl;
 		cout <<  relleno;
