@@ -29,14 +29,14 @@ unsigned long fibonacci_bucle(unsigned long numero) {
 	unsigned long penultimo = 0, ultimo = 1, aux , resultado;
 
 	if (numero > 1) {
-		for (unsigned short int i = 1; i <= numero; i++)
+		for (unsigned short int i = 1; i < numero; i++)
 		{
 			aux = ultimo;
 			ultimo = penultimo + ultimo;
 			penultimo = aux;
 		}
 
-		return penultimo;
+		return ultimo;
 	}
 	else {
 		return numero;
