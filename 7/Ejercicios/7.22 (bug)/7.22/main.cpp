@@ -13,7 +13,7 @@ array <int, cantidadMovimientos > vertical{ -1,-2,-2,-1,1,2,2,1 };
 unsigned short columnaActual = 4, filaActual = 3;
 
 
-void mover(); // Realiza el movimiento y la llamada a las funciones necesarias.
+void mover(size_t ); // Realiza el movimiento y la llamada a las funciones necesarias.
 
 // Comprueba si el movimiento propuesto se sale de los limites del tablero.
 bool comprobarLimites(const unsigned short  &movimiento); 
@@ -26,13 +26,16 @@ unsigned short indiceMejorMovimiento(const array < unsigned short, cantidadMovim
 
 
 int main() {
-	for (size_t contador = 0; contador < 64; contador++)
-		mover();
+	for (size_t contador = 0; contador < 64; contador++) {
+		cout << "Contador: " << contador;
+		mover(contador);
+	}
 
 	system("pause");
 }
 
-void mover() {
+void mover(size_t contador) {
+	cout << "-" << contador << endl;
 	array < unsigned short, cantidadMovimientos > puntuacionCasillas;
 	vector < short unsigned int > indicesValidos;
 	for (unsigned short movimiento = 0; movimiento < cantidadMovimientos; movimiento++)
@@ -53,7 +56,7 @@ void mover() {
 	cout << "La mejor puntuacion de casilla es para el movimiento:	" << movimiento << endl;
 	
 	/* BUG RELACIONADO CON LAS SIGUIENTES 3 LINEAS. (Si un movimiento tiene como destino una casilla de fuera del tablero ya no funciona)  */
-	tablero.at(columnaActual + horizontal.at(movimiento)).at(filaActual + vertical.at(movimiento))++;
+	tablero.at(columnaActual + horizontal.at(movimiento)).at(filaActual + vertical.at(movimiento)) = contador;
 	//columnaActual += horizontal.at(movimiento);
 	//filaActual += vertical.at(movimiento);
 	/* FIN DEL BUG  */
