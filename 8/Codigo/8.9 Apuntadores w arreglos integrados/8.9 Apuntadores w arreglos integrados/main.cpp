@@ -1,8 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main() {
 
+class x {
+public :
+	int getX() {
+		return x;
+	}
+private:
+	int x = 10;
+};
+int main() {
 	int b[] = { 10, 20, 30, 40 };
 	int *bPtr = b;
 
