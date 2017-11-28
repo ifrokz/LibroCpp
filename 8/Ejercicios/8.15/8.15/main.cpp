@@ -22,6 +22,7 @@ void recogerInstrucciones(int *arr, size_t end) {
 }
 void imprimirYVaciarMemoria(int *arr, size_t end) {
 	cout << "\n\nRegistros:" << endl;
+	cout << "acumulador"
 }
 int main() {
 	cout <<
